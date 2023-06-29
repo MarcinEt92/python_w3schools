@@ -1,0 +1,8 @@
+.idea
+Scripts/Include
+Scripts/Lib
+Scripts/Scripts
+Scripts/TutorialBasics/__pycache__/
+Scripts/TutorialBasics/__pycache__/*
+Scripts/TutorialBasics/HelperClasses/__pycache__/
+Scripts/pyvenv.cfg
