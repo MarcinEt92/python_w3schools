@@ -1,6 +1,7 @@
 import copy
 import datetime
 import json
+import os
 import TutorialBasics.HelperClasses.Person
 import re
 from TutorialBasics.HelperClasses.Person import Person, Student
@@ -284,6 +285,43 @@ class Basics:
         number = 5.345
         print(f"formatetd string: {number: .2f}")
 
+    @classmethod
+    def file_handling(cls):
+        print("\n ==================== file_handling ==================== \n")
+        file_location = "Scripts/TutorialBasics/files/file.txt"
+        cls.file_read(file_location)
+        cls.file_append(file_location)
+        cls.file_delete()
+
+
+    @classmethod
+    def file_read(cls, file_location):
+        print("\n ==================== file_read ==================== \n")
+        with open(file_location, "r") as f:
+            print(f"File content:\n\n{f.read()}")
+            f.seek(0)
+            print(f"\nNumber of chars: {len(f.read())}")
+
+
+    @classmethod
+    def file_append(cls, file_location):
+        print("\n ==================== file_append ==================== \n")
+        with open(file_location, "r") as f:
+            file_len = len(f.readlines())
+
+        with open(file_location, "a") as f:
+            file_len += 1
+            f.write(f"\nsentence {file_len}")
+
+    @classmethod
+    def file_delete(cls):
+        print("\n ==================== file_delete ==================== \n")
+        file_location = "Scripts/TutorialBasics/files/file2.txt"
+        if os.path.exists(file_location):
+            os.remove(file_location)
+            print("File removed succesfully")
+        else:
+            print("given path does not exist")
 
 
 
@@ -292,7 +330,11 @@ class Basics:
 
 
 
-# https://www.w3schools.com/python/python_sets.asp - to do
+
+
+
+
+
 
 
 
