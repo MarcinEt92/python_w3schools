@@ -19,6 +19,7 @@ class Tutorial(Basics):
         print("\t3 - functions_classes")
         print("\t4 - date_time")
         print("\t5 - others")
+        print("\t6 - file handling")
 
     @classmethod
     def run(cls):
@@ -28,7 +29,8 @@ class Tutorial(Basics):
             2: cls.strings_and_collections,
             3: cls.functions_classes,
             4: cls.date_time,
-            5: cls.others
+            5: cls.others,
+            6: cls.file_handling
         }
 
         option = options.get(choice)
